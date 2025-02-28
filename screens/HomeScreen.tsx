@@ -1,18 +1,26 @@
 import React from 'react';
 import { View, Text, Button, FlatList, Image, StyleSheet } from 'react-native';
+import Posts from './components/Posts';
 
+// Array of post objects, each containing an id, username, image URL, and caption 
 const posts = [
   {
     id: '1',
     username: 'user_1',
-    image: 'https://placekitten.com/200/200',
-    caption: 'This is my first post!',
+    image: 'https://picsum.photos/200/200',
+    caption: 'This is my first post! #reflection #nopunintended',
   },
   {
     id: '2',
     username: 'user_2',
-    image: 'https://placekitten.com/200/200',
-    caption: 'Enjoying the day!',
+    image: 'https://picsum.photos/200/200',
+    caption: 'Enjoying the day!!',
+  },
+  {
+    id: '3',
+    username: 'user_3',
+    image: 'https://picsum.photos/200/200',
+    caption: 'Enjoying the day!!',
   },
   // Add more posts as needed
 ];
@@ -30,18 +38,14 @@ function HomeScreen({ navigation }: any) {
       <FlatList
         data={posts}
         renderItem={({ item }) => (
-          <View style={styles.postContainer}>
-            <Text style={styles.username}>{item.username}</Text>
-            <Image source={{ uri: item.image }} style={styles.image} />
-            <Text style={styles.caption}>{item.caption}</Text>
-          </View>
+          <Posts username={item.username} image={item.image} caption={item.caption}/>
         )}
         keyExtractor={(item) => item.id}
       />
     </View>
   );
 }
-
+// Styling 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
