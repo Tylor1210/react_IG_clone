@@ -5,7 +5,7 @@ function ProfileScreen({ navigation }: any) {
   return (
     <View style={styles.container}>
       <Image
-        source={{ uri: 'https://placekitten.com/200/200' }} // Placeholder profile image
+        source={{ uri: 'https://picsum.photos/200/200' }} // Placeholder profile image
         style={styles.profileImage}
       />
       <Text style={styles.username}>User_1</Text>
