@@ -1,14 +1,15 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-native';
 
 function ProfileScreen({ navigation }: any) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Profile Screen</Text>
-      <Button
-        title="Back to Home"
-        onPress={() => navigation.goBack()}
+      <Image
+        source={{ uri: 'https://picsum.photos/200/200' }} // Placeholder profile image
+        style={styles.profileImage}
       />
+      <Text style={styles.username}>User_1</Text>
+      <Text style={styles.bio}>Hello, I am an Instagram clone user!</Text>
     </View>
   );
 }
@@ -18,10 +19,22 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    padding: 20,
   },
-  title: {
+  profileImage: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    marginBottom: 20,
+  },
+  username: {
     fontSize: 24,
     fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  bio: {
+    fontSize: 16,
+    color: '#555',
   },
 });
 
