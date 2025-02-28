@@ -3,14 +3,15 @@ import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 
 
-//Interface (typescript) defines the shape of the props that Post component will receive. 
+//Interface (typescript) defines the shape (type) of the props that Post component will receive. 
 //This case we expect 3 "props"
 interface PostProps {
     username: string;
     image: string;
     caption: string;
 }
-
+// React functional comp. typeDef PostProps (Destructure props object ^ above for use.) 
+//Render inside styled View
 const Post: React.FC<PostProps> = ({ username, image, caption }) => {
     return (
       <View style={styles.container}>

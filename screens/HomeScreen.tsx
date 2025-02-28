@@ -8,7 +8,7 @@ const posts = [
     id: '1',
     username: 'user_1',
     image: 'https://picsum.photos/200/200',
-    caption: 'This is my first post! #reflection #nopunintended',
+    caption: 'This is my first post! #reflection ',
   },
   {
     id: '2',
